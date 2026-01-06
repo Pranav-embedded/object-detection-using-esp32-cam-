@@ -5,7 +5,7 @@ The system is trained to detect objects like **onion, potato, and tomato**, and 
 
 ---
 
-## 📌 Project Features
+##  Project Features
 
 * Object detection using **ESP32-CAM (AI Thinker)**
 * Custom dataset collected using ESP32-CAM
@@ -15,7 +15,7 @@ The system is trained to detect objects like **onion, potato, and tomato**, and 
 
 ---
 
-## 🧰 Hardware Requirements
+##  Hardware Requirements
 
 * ESP32-CAM (AI Thinker)
 * USB-to-TTL (FTDI) Programmer
@@ -26,7 +26,7 @@ The system is trained to detect objects like **onion, potato, and tomato**, and 
 
 ---
 
-## 🔌 Hardware Connections
+##  Hardware Connections
 
 ### ESP32-CAM Programming Connections
 
@@ -38,14 +38,14 @@ The system is trained to detect objects like **onion, potato, and tomato**, and 
 | U0T       | RX                         |
 | GPIO0     | GND *(Only during upload)* |
 
-⚠️ **Important**
+ **Important**
 
 * GPIO0 must be connected to **GND while uploading**
 * Remove GPIO0-GND after upload for normal operation
 
 ---
 
-## 🖥️ Software Requirements
+##  Software Requirements
 
 * Arduino IDE
 * ESP32 Board Package
@@ -54,7 +54,7 @@ The system is trained to detect objects like **onion, potato, and tomato**, and 
 
 ---
 
-## ⚙️ Arduino IDE Setup
+##  Arduino IDE Setup
 
 1. Install **Arduino IDE**
 2. Add ESP32 Board Manager
@@ -67,19 +67,19 @@ The system is trained to detect objects like **onion, potato, and tomato**, and 
 
 ---
 
-## 📷 Image Collection Using ESP32-CAM
+##  Image Collection Using ESP32-CAM
 
-### 1️⃣ Install Library
+### 1️ Install Library
 
 Install **Eloquent ESP32 CAM** library from Arduino Library Manager.
 
-### 2️⃣ Open Image Capture Example
+### 2️ Open Image Capture Example
 
 
 File → Examples → eloquentesp32cam → esp32cam_tp3
 
 
-### 3️⃣ Modify Code
+### 3️ Modify Code
 
 * Add your **Wi-Fi SSID & Password**
 * Set camera type to **AI Thinker**
@@ -88,7 +88,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 #define CAMERA_MODEL_AI_THINKER
 
 
-### 4️⃣ Upload Code
+### 4️ Upload Code
 
 * Connect GPIO0 → GND
 * Power reset ESP32-CAM
@@ -96,7 +96,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 * Remove GPIO0 → GND
 * Power reset again
 
-### 5️⃣ Access Image Server
+### 5️ Access Image Server
 
 * Open Serial Monitor
 * Copy the IP address
@@ -104,7 +104,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-## 📊 Dataset Collection
+##  Dataset Collection
 
 * Fix ESP32-CAM position
 * Place object inside camera frame
@@ -116,16 +116,16 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-## ☁️ Edge Impulse Setup
+##  Edge Impulse Setup
 
-### 1️⃣ Create Project
+### 1️ Create Project
 
 * Log in to **Edge Impulse**
 * Create new project (e.g., `obj-detect`)
 
 ---
 
-### 2️⃣ Upload Dataset
+### 2️ Upload Dataset
 
 * Go to **Data Acquisition**
 * Upload ZIP files
@@ -136,7 +136,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-### 3️⃣ Label Images
+### 3️ Label Images
 
 * Go to **Labeling Queue**
 * Draw bounding boxes
@@ -144,9 +144,9 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-## 🧠 Model Training
+##  Model Training
 
-### 1️⃣ Create Impulse
+### 1️ Create Impulse
 
 * Image size: **96 × 96**
 * Fit shortest axis
@@ -157,7 +157,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-### 2️⃣ Generate Features
+### 2️ Generate Features
 
 * Color depth: **Grayscale**
 * Generate features
@@ -165,7 +165,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-### 3️⃣ Train Model
+### 3️ Train Model
 
 * Training cycles: **60**
 * Learning rate: **0.01**
@@ -175,9 +175,9 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-## 📦 Deployment
+##  Deployment
 
-### 1️⃣ Export Model
+### 1️ Export Model
 
 * Go to **Deployment**
 * Select **Arduino Library**
@@ -186,7 +186,7 @@ File → Examples → eloquentesp32cam → esp32cam_tp3
 
 ---
 
-### 2️⃣ Add Library to Arduino
+### 2️ Add Library to Arduino
 
 
 Sketch → Include Library → Add .ZIP Library
@@ -194,7 +194,7 @@ Sketch → Include Library → Add .ZIP Library
 
 ---
 
-### 3️⃣ Open Example Code
+### 3️ Open Example Code
 
 
 File → Examples → (Your_Model_Name) → esp32_camera
@@ -205,7 +205,7 @@ File → Examples → (Your_Model_Name) → esp32_camera
 
 ---
 
-### 4️⃣ Upload Final Code
+### 4️ Upload Final Code
 
 * GPIO0 → GND
 * Power reset
@@ -215,7 +215,7 @@ File → Examples → (Your_Model_Name) → esp32_camera
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 1. Open Serial Monitor
 2. Place object in front of camera
@@ -228,7 +228,7 @@ File → Examples → (Your_Model_Name) → esp32_camera
 ---
 
 
-## 📈 Tips for Better Accuracy
+##  Tips for Better Accuracy
 
 * Use consistent lighting
 * Avoid cluttered backgrounds
@@ -238,7 +238,7 @@ File → Examples → (Your_Model_Name) → esp32_camera
 ---
 
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Add speaker module for voice output
 * Store MP3 files on SD card
@@ -247,7 +247,7 @@ File → Examples → (Your_Model_Name) → esp32_camera
 
 ---
 
-## 🙌 Credits
+##  Credits
 
 * ESP32-CAM Community
 * Edge Impulse Team
